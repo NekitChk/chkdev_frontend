@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#root{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.EvLogo{
+    position: fixed;
+    clip-path: url(#ev-logo-clippath);
+    -webkit-clip-path: url(#ev-logo-clippath);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.EvLogo .image{
+    position: fixed;
+    background: rgb(0,255,214);
+    background: linear-gradient(90deg, rgba(0,255,214,1) 0%, rgba(0,194,255,1) 13%, rgba(0,215,255,1) 20%, rgba(0,255,76,1) 27%, rgba(0,255,115,1) 33%, rgba(0,255,184,1) 42%, rgba(0,255,252,1) 54%, rgba(0,172,255,1) 64%, rgba(0,74,255,1) 77%, rgba(255,0,112,1) 87%, rgba(255,0,44,1) 100%);
+    width: 2500px;
+    height: 100%;
+}
