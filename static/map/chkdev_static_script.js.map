@@ -1,0 +1,9 @@
+{
+    "version":3,
+    "file":"chkdev_static_script.js",
+    "sourceRoot":"",
+    "sources":["https://static.chkdev.chekin-cdn.net/js/source/chkdev_static_script.ts"],
+    "names":[],
+    "mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,aAAa,CAAC;AAEvC,SAAS,SAAS;IACd,MAAM,OAAO,GAAG,QAAQ,CAAC,aAAa,CAAC,KAAK,CAAC,CAAC;",
+    "sourcesContent": []
+}
