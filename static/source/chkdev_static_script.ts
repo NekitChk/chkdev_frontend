@@ -1,4 +1,6 @@
-//CHKDEV STATIC - 31.07.2021
+//CHKDEV STATIC - 13.08.2021 03:39
+
+import { URLSearchParams } from "url";
 
 export {};
 
@@ -57,6 +59,18 @@ declare global{
         }
     }
 
+    window.chkdev.getURLParams = function(): {}{
+        let obj = {};
+        let queryString: string = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        let entries = urlParams.entries();
+        for (let entry of entries){
+            obj[entry[0]] = entry[1];
+        }
+
+        return obj;
+    }
+
     class AJAX{
         //Chkdev Ajax Request Library;
         protected url: string;
@@ -65,6 +79,7 @@ declare global{
         protected responseType: string;
         public options: {postBodyType?: string};
         protected funcMap: Map<string, any> | undefined;
+
         constructor(sendInfo: {url: string, method?: string},
                     requestPayload: {},
                     options: {postBodyType?: string, responseType?: string}){
