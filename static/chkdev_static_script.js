@@ -1,6 +1,5 @@
 "use strict";
-//CHKDEV STATIC - 31.07.2021
-//# sourceMappingURL=/js/map/chkdev_static_script.js.map
+//CHKDEV STATIC - 13.08.2021 03:39
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -36,6 +35,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 (function () {
     window.chkdev = {};
@@ -75,6 +85,27 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         else {
             return false;
         }
+    };
+    window.chkdev.getURLParams = function () {
+        var e_1, _a;
+        var obj = {};
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var entries = urlParams.entries();
+        try {
+            for (var entries_1 = __values(entries), entries_1_1 = entries_1.next(); !entries_1_1.done; entries_1_1 = entries_1.next()) {
+                var entry = entries_1_1.value;
+                obj[entry[0]] = entry[1];
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (entries_1_1 && !entries_1_1.done && (_a = entries_1["return"])) _a.call(entries_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        return obj;
     };
     var AJAX = /** @class */ (function () {
         function AJAX(sendInfo, requestPayload, options) {
